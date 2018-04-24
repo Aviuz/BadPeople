@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <BadPeople_DebugITabName>BadPl-Dev</BadPeople_DebugITabName>
+  <BadPeople_TurnBadMessage>Sometimes life can change people ...\n{0}, after seeing horrible things on this world, has become evil person.</BadPeople_TurnBadMessage>
+  <BadPeople_TurnGoodMessage>Finally, {0} gave up the immoral lifestyle. From now on {0} will try to make this world a better place.</BadPeople_TurnGoodMessage>
+
+  <BadPeople_Button_Details>Details</BadPeople_Button_Details>
+  
+  <BadPeople_Log_ReleasingPrisoner>I witnessed releasing of prisoner, what a merciful act</BadPeople_Log_ReleasingPrisoner>
+  <BadPeople_Log_WasReleased>They released me from captivity</BadPeople_Log_WasReleased>
+  <BadPeople_Log_AcceptedRefugee>My faction accepted refugee</BadPeople_Log_AcceptedRefugee>
+  <BadPeople_Log_RescuedNonColonist>I rescued stranger or ally</BadPeople_Log_RescuedNonColonist>
+  <BadPeople_Log_GainedAllies>My faction gained allies</BadPeople_Log_GainedAllies>
+
+  <BadPeople_Log_FactionExecutedPrisoner>Prisoner was executed</BadPeople_Log_FactionExecutedPrisoner>
+  <BadPeople_Log_ExecutedPrisoner>I executed prisoner</BadPeople_Log_ExecutedPrisoner>
+  <BadPeople_Log_SoldPrisoner>I sold prisoner</BadPeople_Log_SoldPrisoner>
+  <BadPeople_Log_KilledRelative>I killed my family member</BadPeople_Log_KilledRelative>
+  <BadPeople_Log_KilledFriend>I killed a friend</BadPeople_Log_KilledFriend>
+  <BadPeople_Log_WasCaptured>I was taken as prisoner</BadPeople_Log_WasCaptured>
+  <BadPeople_Log_MyOrganHarvested>My organ was harvested</BadPeople_Log_MyOrganHarvested>
+  <BadPeople_Log_HarvestedOrgan>I harvested organ from a human</BadPeople_Log_HarvestedOrgan>
+  <BadPeople_Log_LostAllies>My faction lost allies</BadPeople_Log_LostAllies>
+  <BadPeople_Log_WitnessedColonistDeath>I saw one of my people die</BadPeople_Log_WitnessedColonistDeath>
+</LanguageData>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07FF4866-29B2-41AE-B243-6583F1B3BD56}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BadPeople</RootNamespace>
+    <AssemblyName>Bad People</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>C:\Users\avius\Desktop\RimworldMods Shortcuts\Libraries\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\Prison Labor Mod\Source\Libraries\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\Prison Labor Mod\Source\Libraries\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionLog.cs" />
+    <Compile Include="Dialog_AlteringNotification.cs" />
+    <Compile Include="BadPeopleUtility.cs" />
+    <Compile Include="CanibalismProgression.cs" />
+    <Compile Include="ClassInjector.cs" />
+    <Compile Include="Dialog_ActionList.cs" />
+    <Compile Include="HarmonyPatches\HPatcher.cs" />
+    <Compile Include="HarmonyPatches\Patch_CannibalTick.cs" />
+    <Compile Include="HarmonyPatches\Patch_SetCurrentRefugee.cs" />
+    <Compile Include="HarmonyPatches\Patch_ToggleDevMode.cs" />
+    <Compile Include="HarmonyPatches\Patch_PawnAdditionalData.cs" />
+    <Compile Include="HarmonyPatches\Patch_RemoveLoadedClassesWhenPawnDies.cs" />
+    <Compile Include="HarmonyPatches\Trigger_DoctorRemovedBodypart.cs" />
+    <Compile Include="HarmonyPatches\Trigger_RefugeeAccepted.cs" />
+    <Compile Include="HarmonyPatches\Trigger_ReleasePrisoner.cs" />
+    <Compile Include="HarmonyPatches\Trigger_SellingPrisoner.cs" />
+    <Compile Include="HarmonyPatches\Trigger_TakePrisoner.cs" />
+    <Compile Include="HarmonyPatches\Trigger_ThoughtAdded.cs" />
+    <Compile Include="HarmonyPatches\Trigger_Kill.cs" />
+    <Compile Include="HarmonyPatches\Trigger_ChangingAlliance.cs" />
+    <Compile Include="Initialization.cs" />
+    <Compile Include="ITab_DebugActivityLog.cs" />
+    <Compile Include="Need_Karma.cs" />
+    <Compile Include="BPDefOf.cs" />
+    <Compile Include="PointsTable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\About\About.xml">
+      <Link>Organizer\About.xml</Link>
+    </Content>
+    <Content Include="..\changelog.txt">
+      <Link>Organizer\changelog.txt</Link>
+    </Content>
+    <Content Include="..\Defs\NeedDefs.xml">
+      <Link>Defs\NeedDefs.xml</Link>
+    </Content>
+    <Content Include="..\Defs\TraitDefs.xml">
+      <Link>Defs\TraitDefs.xml</Link>
+    </Content>
+    <Content Include="..\Languages\English\Keyed\Keys.xml">
+      <Link>Language\Keys.xml</Link>
+    </Content>
+    <Content Include="..\TaskList.txt">
+      <Link>Organizer\TaskList.txt</Link>
+    </Content>
+    <Content Include="Organizer\AffectedActionList.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="..\credits.md">
+      <Link>Organizer\credits.md</Link>
+    </None>
+    <None Include="..\README.md">
+      <Link>Organizer\README.md</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

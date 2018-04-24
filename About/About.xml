@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Bad People</name>
+	<author>Avius</author>
+	<targetVersion>0.18.0</targetVersion>
+	<description>Version 1.0.0\n\nThis addon will allow pawns becoming evil or cannibals. This will happen when pawn will participate in some actions like executing prisoners, or eating lot of human flesh.</description>
+</ModMetaData>
