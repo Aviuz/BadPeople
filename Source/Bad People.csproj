@@ -85,6 +85,9 @@
     <Content Include="..\About\About.xml">
       <Link>Organizer\About.xml</Link>
     </Content>
+    <Content Include="..\AffectedActionList.txt">
+      <Link>Organizer\AffectedActionList.txt</Link>
+    </Content>
     <Content Include="..\changelog.txt">
       <Link>Organizer\changelog.txt</Link>
     </Content>
@@ -100,7 +103,6 @@
     <Content Include="..\TaskList.txt">
       <Link>Organizer\TaskList.txt</Link>
     </Content>
-    <Content Include="Organizer\AffectedActionList.txt" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
