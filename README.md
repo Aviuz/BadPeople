@@ -20,7 +20,7 @@ Evil trait will appear naturally with commonality equal for example to Kind trai
 Mechanics of gaining/loosing this trait is a bit complex, but it will generally give Evil trait to pawns that are witnessing violence and life crisis, and will remove from pawns that are living in moral community.
 Executing, selling prisoners and harvesting organs will contribute to becoming evil.
 Releasing prisoners, rescuing strangers, and gaining friends will contribute to becoming moral again.
-* [List of actions affected by this mechanics](AffectedActionList.txt)
+* [List of actions affected by this mechanics](AffectedActionList.md)
 * Evil progression explanation (coming soon!)
 
 ## Cannibal trait
