@@ -8,6 +8,13 @@ using Verse;
 
 namespace BadPeople
 {
+    public enum AlterType
+    {
+        Bad,
+        Good,
+        Cannibal,
+    }
+
     public class Dialog_AlteringNotification : Window
     {
         private static readonly Vector2 WinSize = new Vector2(WinWidth + 2 * WindowGap, WinHeight + 2 * WindowGap);
@@ -17,15 +24,18 @@ namespace BadPeople
 
         private Pawn pawn;
         private List<string> actionList;
+        private AlterType type;
 
         public override Vector2 InitialSize => WinSize;
 
-        public Dialog_AlteringNotification(Pawn pawn)
+        public Dialog_AlteringNotification(Pawn pawn, List<string> actionList, AlterType type)
         {
-            this.forcePause = true;
-            this.absorbInputAroundWindow = true;
             this.pawn = pawn;
-            actionList = ActionLog.For(pawn).PickActionList();
+            this.type = type;
+            this.actionList = actionList;
+
+            forcePause = true;
+            absorbInputAroundWindow = true;
         }
 
         public override void DoWindowContents(Rect inRect)
@@ -45,12 +55,27 @@ namespace BadPeople
 
             var listing = new Listing_Standard(GameFont.Small);
             listing.Begin(textRect);
-            string message = pawn.story.traits.HasTrait(BPDefOf.BadPeople_Evil) ? "BadPeople_TurnBadMessage" : "BadPeople_TurnGoodMessage";
+            string message = "";
+            switch (type)
+            {
+                case AlterType.Bad:
+                    message = "BadPeople_TurnBadMessage";
+                    break;
+                case AlterType.Good:
+                    message = "BadPeople_TurnGoodMessage";
+                    break;
+                case AlterType.Cannibal:
+                    message = "BadPeople_TurnCannibalMessage";
+                    break;
+            }
             listing.Label(message.Translate(pawn.NameStringShort));
             listing.End();
 
-            if (Widgets.ButtonText(new Rect(0, mainRect.height - 30, 200, 30), "BadPeople_Button_Details".Translate()))
-                Find.WindowStack.Add(new Dialog_ActionList(actionList));
+            if (type == AlterType.Bad || type == AlterType.Good)
+            {
+                if (Widgets.ButtonText(new Rect(0, mainRect.height - 30, 200, 30), "BadPeople_Button_Details".Translate()))
+                    Find.WindowStack.Add(new Dialog_ActionList(actionList));
+            }
 
             if (Widgets.ButtonText(new Rect(mainRect.width - 200, mainRect.height - 30, 200, 30), "OK".Translate()))
                 Close();

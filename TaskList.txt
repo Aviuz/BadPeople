@@ -6,3 +6,4 @@ Agenda:
   - Scheduled for implementation
   * Considered
 ==============================
+- add negative thoughts for evil ppl for example releasing prisoners

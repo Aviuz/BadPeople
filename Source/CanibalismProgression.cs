@@ -64,6 +64,10 @@ namespace BadPeople
             if (value < chance)
             {
                 pawn.story.traits.GainTrait(new Trait(TraitDefOf.Cannibal, 0, true));
+                if (pawn.IsColonist)
+                    Find.WindowStack.Add(new Dialog_AlteringNotification(pawn, null, AlterType.Cannibal));
+                else if (pawn.IsPrisonerOfColony)
+                    Messages.Message("BadPeople_GainedTrait".Translate(pawn.NameStringShort, TraitDefOf.Cannibal.degreeDatas[0].label), pawn, MessageTypeDefOf.NeutralEvent);
                 Locked = true;
             }
         }

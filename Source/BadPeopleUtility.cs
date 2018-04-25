@@ -16,8 +16,10 @@ namespace BadPeople
             var need = pawn.needs.TryGetNeed<Need_Karma>();
             if (need != null)
             {
-                if (need.CurLevel < Need_Karma.BecomeGoodLevel || need.CurLevel > Need_Karma.BecomeEvilLevel)
-                    points *= 0.5f;
+                if ((need.CurLevel < Need_Karma.BecomeGoodLevel && points > 0) || (need.CurLevel > Need_Karma.BecomeEvilLevel && points < 0))
+                {
+                    points *= 0.33f;
+                }
 
                 need.CurLevel += points;
                 need.Notify();

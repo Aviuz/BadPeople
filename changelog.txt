@@ -1,4 +1,9 @@
 Changelog:
+1.1.0
+- instead of notifications for prisoners there will be messages with sound
+- added notification when pawn becoming cannibal (similar to bad/good change)
+- balanced degradation (becoming neutral over time), pawn will become fully neutral if no action is taken over 30 days (half a year)
+- now extremist (very bad/very good) will be harder to change, and will not be affected by natural degradation
 1.0.0
 - public release
 0.0.1
