@@ -1,4 +1,6 @@
 Changelog:
+1.1.1
+- changed trait name from "Evil" to "Depraved"
 1.1.0
 - instead of notifications for prisoners there will be messages with sound
 - added notification when pawn becoming cannibal (similar to bad/good change)

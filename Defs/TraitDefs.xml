@@ -5,8 +5,8 @@
     <commonality>0.2</commonality>
     <degreeDatas>
       <li>
-        <label>Evil</label>
-        <description>NAME enjoys suffering of other people. HECAP can do evil things without feeling bad about it.</description>
+        <label>Depraved</label>
+        <description>NAME does not feel empathy for strangers. HECAP can hurtm them without feeling bad about it.</description>
         <marketValueFactorOffset>0.15</marketValueFactorOffset>
       </li>
     </degreeDatas>

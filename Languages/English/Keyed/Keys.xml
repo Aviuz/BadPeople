@@ -2,7 +2,7 @@
 <LanguageData>
   <BadPeople_DebugITabName>BadPl-Dev</BadPeople_DebugITabName>
 
-  <BadPeople_TurnBadMessage>Sometimes life can change people ...\n{0}, after seeing horrible things on this world, has become evil person.</BadPeople_TurnBadMessage>
+  <BadPeople_TurnBadMessage>Sometimes life can change people ...\n{0}, after seeing horrible things on this world, has become depraved person.</BadPeople_TurnBadMessage>
   <BadPeople_TurnGoodMessage>Finally, {0} gave up the immoral lifestyle. From now on {0} will try to make this world a better place.</BadPeople_TurnGoodMessage>
   <BadPeople_TurnCannibalMessage>After consuming human flesh, {0} tasted in this special meal. Eventually, {0} would like more of it.</BadPeople_TurnCannibalMessage>
   <BadPeople_GainedTrait>{0} gained {1} trait</BadPeople_GainedTrait>
