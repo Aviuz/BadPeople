@@ -15,7 +15,7 @@
 This addon will allow pawns becoming depraved or cannibals. This will happen when pawn will participate in some actions like executing prisoners, or eating lot of human flesh.
 
 ## Depraved trait
-New trait that works similiar to psychopath. Depraved pawns will be only concered about colony(or faction) members, in contrast to Psychopath trait that affects more social actions.
+New trait that works similar to psychopath. Depraved pawns will be only concerned about colony(or faction) members, in contrast to Psychopath trait that affects more social actions.
 Depraved trait will appear naturally with commonality equal for example to Kind trait.
 Mechanics of gaining/loosing this trait is a bit complex, but it will generally give Depraved trait to pawns that are witnessing violence and life crisis, and will remove from pawns that are living in moral community.
 Executing, selling prisoners and harvesting organs will contribute to becoming depraved.
