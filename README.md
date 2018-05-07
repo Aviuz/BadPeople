@@ -10,6 +10,9 @@
 <p align="center">
   Bad People mod for RimWorld
 </p>
+<p align="center">
+    <a href=https://steamcommunity.com/sharedfiles/filedetails/?id=1369675292>Steam workshop</a> | <a href=https://ludeon.com/forums/index.php?topic=41303.0>Ludeon forums</a>
+</p>
 
 ## Description
 This addon will allow pawns becoming depraved or cannibals. This will happen when pawn will participate in some actions like executing prisoners, or eating lot of human flesh.
