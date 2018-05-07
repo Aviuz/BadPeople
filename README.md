@@ -23,12 +23,12 @@ Depraved trait will appear naturally with commonality equal for example to Kind 
 Mechanics of gaining/loosing this trait is a bit complex, but it will generally give Depraved trait to pawns that are witnessing violence and life crisis, and will remove from pawns that are living in moral community.
 Executing, selling prisoners and harvesting organs will contribute to becoming depraved.
 Releasing prisoners, rescuing strangers, and gaining friends will contribute to becoming moral again.
-* [List of actions affected by this mechanics](AffectedActionList.md)
-* Depraved progression explanation (coming soon!)
+* [List of actions affected by this mechanics](../../wiki/Depraved-trait)
+* [Depraved progression explanation](../../wiki/Morality-progression)
 
 ## Cannibal trait
 When pawn will be forced to eat human meat, there will be chance that he will become cannibal. The more pawn eat human flesh, the greater chance of becoming cannibal. 
-* Cannibalism progression explanation (coming soon!)
+* [Cannibalism progression explanation](../../wiki/Cannibalism-progression)
 
 ## Compatibility
 * You can enable this mod to old saves.
