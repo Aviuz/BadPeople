@@ -47,17 +47,17 @@ namespace BadPeople
 
         public void TryBecomeCannibal()
         {
-            // Chance = 5% + Averege(CorpseCount, FullCorpseEaten) * 2,2%
-            // 90% <=> 39 full human flesh meals
+            // Chance = 1% + Averege(CorpseCount, FullCorpseEaten) * 0,5%
+            // 20% <=> 38 full human flesh meals
 
             // Base value
-            var chance = 0.05f;
+            var chance = 0.01f;
             // Count
-            chance += corpseCount * 0.011f;
+            chance += corpseCount * 0.0025f;
             // Nutrition
-            chance += fleshAmount * 0.011f;
-            // Roof to 90%
-            chance = chance > 0.9f ? 0.9f : chance;
+            chance += fleshAmount * 0.0025f;
+            // Roof to 20%
+            chance = chance > 0.2f ? 0.2f : chance;
 
             var value = UnityEngine.Random.Range(0.0f, 1.0f);
 

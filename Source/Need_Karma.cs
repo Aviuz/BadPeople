@@ -54,6 +54,7 @@ namespace BadPeople
             }
             else
             {
+                // Become good
                 if (CurLevel <= BecomeGoodLevel)
                 {
                     if (pawn.story.traits.HasTrait(BPDefOf.BadPeople_Evil))
@@ -67,10 +68,15 @@ namespace BadPeople
                     }
                     readyForChange = false;
                 }
+                // Become evil
                 else if (CurLevel >= BecomeEvilLevel)
                 {
                     if (!pawn.story.traits.HasTrait(BPDefOf.BadPeople_Evil) && !pawn.story.traits.HasTrait(TraitDefOf.Psychopath))
                     {
+                        // Remove kind trait
+                        if (pawn.story.traits.HasTrait(TraitDefOf.Kind))
+                            pawn.story.traits.allTraits.RemoveAll(trait => trait.def == TraitDefOf.Kind);
+
                         pawn.story.traits.GainTrait(new Trait(BPDefOf.BadPeople_Evil, 0, true));
                         var actionLog = ActionLog.For(pawn).PickActionList();
                         if (pawn.IsColonist)
