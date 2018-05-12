@@ -60,11 +60,11 @@ namespace BadPeople
                     AddPoints(killer, PointsTable.ExecutedPrisoner, "BadPeople_Log_ExecutedPrisoner".Translate());
 
                 // Relative
-                if (killer.relations.FamilyByBlood.Contains(pawn))
+                if (killer.relations != null && killer.relations.FamilyByBlood.Contains(pawn))
                     AddPoints(killer, PointsTable.KilledRelative, "BadPeople_Log_KilledRelative".Translate());
 
                 // Friend
-                if (killer.relations.OpinionOf(pawn) >= 20)
+                if (killer.relations != null && killer.relations.OpinionOf(pawn) >= 20)
                     AddPoints(pawn, PointsTable.KilledFriend, "BadPeople_Log_KilledFriend".Translate());
             }
         }
