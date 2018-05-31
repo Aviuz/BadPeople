@@ -7,3 +7,5 @@ Agenda:
   * Considered
 ==============================
 - add negative thoughts for evil ppl for example releasing prisoners
+- optional dev dialogs
+- witnessing organ harvesting
