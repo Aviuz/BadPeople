@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionLog.cs" />
+    <Compile Include="SettingsWindow.cs" />
     <Compile Include="Dialog_AlteringNotification.cs" />
     <Compile Include="BadPeopleUtility.cs" />
     <Compile Include="CanibalismProgression.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Need_Karma.cs" />
     <Compile Include="BPDefOf.cs" />
     <Compile Include="PointsTable.cs" />
+    <Compile Include="Prefs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
