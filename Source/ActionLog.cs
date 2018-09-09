@@ -39,9 +39,9 @@ namespace BadPeople
         {
             string color = value > 0 ? "red" : "cyan";
             string date;
-            if (pawn.Map != null || Find.VisibleMap != null)
+            if (pawn.Map != null || Find.CurrentMap != null)
             {
-                int longitude = pawn.Map != null ? pawn.Map.Tile : Find.VisibleMap.Tile;
+                int longitude = pawn.Map != null ? pawn.Map.Tile : Find.CurrentMap.Tile;
                 date = GenDate.DateFullStringAt(Find.TickManager.TicksAbs, Find.WorldGrid.LongLatOf(longitude));
             }
             else

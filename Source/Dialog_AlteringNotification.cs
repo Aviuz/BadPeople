@@ -68,7 +68,7 @@ namespace BadPeople
                     message = "BadPeople_TurnCannibalMessage";
                     break;
             }
-            listing.Label(message.Translate(pawn.NameStringShort));
+            listing.Label(message.Translate(pawn.Name.ToStringShort));
             listing.End();
 
             if (type == AlterType.Bad || type == AlterType.Good)

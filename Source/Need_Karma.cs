@@ -64,7 +64,7 @@ namespace BadPeople
                         if (pawn.IsColonist)
                             Find.WindowStack.Add(new Dialog_AlteringNotification(pawn, actionLog, AlterType.Good));
                         else if (pawn.IsPrisonerOfColony)
-                            Messages.Message("BadPeople_LostTrait".Translate(pawn.NameStringShort, BPDefOf.BadPeople_Evil.degreeDatas[0].label), pawn, MessageTypeDefOf.NeutralEvent);
+                            Messages.Message("BadPeople_LostTrait".Translate(pawn.Name.ToStringShort, BPDefOf.BadPeople_Evil.degreeDatas[0].label), pawn, MessageTypeDefOf.NeutralEvent);
                     }
                     readyForChange = false;
                 }
@@ -82,7 +82,7 @@ namespace BadPeople
                         if (pawn.IsColonist)
                             Find.WindowStack.Add(new Dialog_AlteringNotification(pawn, actionLog, AlterType.Bad));
                         else if (pawn.IsPrisonerOfColony)
-                            Messages.Message("BadPeople_GainedTrait".Translate(pawn.NameStringShort, BPDefOf.BadPeople_Evil.degreeDatas[0].label), pawn, MessageTypeDefOf.NeutralEvent);
+                            Messages.Message("BadPeople_GainedTrait".Translate(pawn.Name.ToStringShort, BPDefOf.BadPeople_Evil.degreeDatas[0].label), pawn, MessageTypeDefOf.NeutralEvent);
                     }
                     readyForChange = false;
                 }
