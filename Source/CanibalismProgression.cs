@@ -67,7 +67,7 @@ namespace BadPeople
                 if (pawn.IsColonist)
                     Find.WindowStack.Add(new Dialog_AlteringNotification(pawn, null, AlterType.Cannibal));
                 else if (pawn.IsPrisonerOfColony)
-                    Messages.Message("BadPeople_GainedTrait".Translate(pawn.NameStringShort, TraitDefOf.Cannibal.degreeDatas[0].label), pawn, MessageTypeDefOf.NeutralEvent);
+                    Messages.Message("BadPeople_GainedTrait".Translate(pawn.Name.ToStringShort, TraitDefOf.Cannibal.degreeDatas[0].label), pawn, MessageTypeDefOf.NeutralEvent);
                 Locked = true;
             }
         }

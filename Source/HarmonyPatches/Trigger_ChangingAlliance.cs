@@ -9,17 +9,18 @@ using Verse;
 
 namespace BadPeople.HarmonyPatches
 {
-    [HarmonyPatch(typeof(Faction), "AffectGoodwillWith")]
+    //(Faction other, int goodwillChange, bool canSendMessage = true, bool canSendHostilityLetter = true, string reason = null, GlobalTargetInfo? lookTarget = null)
+    [HarmonyPatch(typeof(Faction), "TryAffectGoodwillWith")]
     static class Trigger_ChangingAlliance
     {
-        static void Prefix(Faction __instance, Faction other, float goodwillChange)
+        static void Prefix(Faction __instance, Faction other, int goodwillChange, bool canSendMessage, bool canSendHostilityLetter, string reason, GlobalTargetInfo? lookTarget)
         {
             if (Prerequirments(__instance, other, goodwillChange))
             {
-                if(!__instance.HostileTo(other) && __instance.GoodwillWith(other) < -80f)
+                if(!__instance.HostileTo(other) && __instance.GoodwillWith(other) < -80)
                     BadPeopleUtility.NotifyLostAllies(other);
 
-                if (__instance.HostileTo(other) && __instance.GoodwillWith(other) > 0f)
+                if (__instance.HostileTo(other) && __instance.GoodwillWith(other) > 0)
                     BadPeopleUtility.NotifyGainedAllies(other);
             }
         }
@@ -30,7 +31,7 @@ namespace BadPeople.HarmonyPatches
             {
                 return false;
             }
-            if (goodwillChange > 0f && !faction.def.appreciative)
+            if (goodwillChange > 0f && faction.def.permanentEnemy)
             {
                 return false;
             }

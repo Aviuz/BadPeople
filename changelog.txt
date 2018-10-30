@@ -1,4 +1,8 @@
 Changelog:
+1.1.5
+- updated to RimWorld 1.0
+1.1.4
+- updated to RimWorld Beta 19
 1.1.3
 - fixed error when mechanoid kills something
 1.1.2
