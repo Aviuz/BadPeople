@@ -51,7 +51,7 @@ namespace BadPeople
 
         public static void NotifyPawnKilled(Pawn pawn, DamageInfo? dinfo, Hediff hediff)
         {
-            if (dinfo.HasValue && dinfo.Value.Instigator != null)
+            if (dinfo.HasValue && dinfo.Value.Instigator != null && dinfo.Value.Instigator is Pawn)
             {
                 Pawn killer = dinfo.Value.Instigator as Pawn;
 
