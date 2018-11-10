@@ -11,10 +11,17 @@ namespace BadPeople
     {
         static Initialization()
         {
-            HarmonyPatches.HPatcher.Init();
-            ClassInjector.Initialize();
+            try
+            {
+                HarmonyPatches.HPatcher.Init();
+                ClassInjector.Initialize();
 
-            ClassInjector.EnableDevMode(Prefs.DevMode);
+                ClassInjector.EnableDevMode(Prefs.DevMode);
+            }
+            catch (Exception e)
+            {
+                Log.Error($"BadPeople: Failed to initialize: {e.Message}");
+            }
         }
     }
 }

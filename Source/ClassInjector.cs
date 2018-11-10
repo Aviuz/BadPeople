@@ -21,7 +21,7 @@ namespace BadPeople
 
             foreach (var thought in nullifiedThoughts)
             {
-                thought.nullifyingTraits.Add(BPDefOf.BadPeople_Evil);
+                thought.nullifyingTraits?.Add(BPDefOf.BadPeople_Evil);
                 thought.ResolveReferences();
             }
 

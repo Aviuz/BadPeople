@@ -6,7 +6,7 @@
     <degreeDatas>
       <li>
         <label>Depraved</label>
-        <description>NAME does not feel empathy for strangers. HECAP can hurt them without feeling bad about it.</description>
+        <description>{PAWN_nameDef} does not feel empathy for strangers. {PAWN_pronoun} can hurt them without feeling bad about it.</description>
         <marketValueFactorOffset>0.15</marketValueFactorOffset>
       </li>
     </degreeDatas>
