@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,7 +14,7 @@ namespace BadPeople.HarmonyPatches
     {
         public static void Init()
         {
-            var harmony = HarmonyInstance.Create("Harmony_BadPeople");
+            var harmony = new Harmony("Harmony_BadPeople");
             try
             {
                 harmony.PatchAll(Assembly.GetExecutingAssembly());
