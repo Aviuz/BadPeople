@@ -8,7 +8,7 @@ SET steam_changelog=https://steamcommunity.com/sharedfiles/filedetails/changelog
 SET steam_description=https://steamcommunity.com/sharedfiles/itemedittext/?id=%steam_id%
 
 SET target_directory=D:\Program Files\Steam\steamapps\common\RimWorld\Mods\%mod_name%
-SET zip_directory=C:\Users\avius\Desktop\%mod_name%.zip
+SET zip_directory=C:\Users\avius\Desktop\%mod_name%.rar
 
 
 :: ========= Zip archive ==========
