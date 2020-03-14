@@ -36,6 +36,7 @@ namespace BadPeople
 
         public static void EnableDevMode(bool dev)
         {
+#if DEBUG
             if (dev != BPDefOf.BadPeople_Karma.showOnNeedList)
             {
                 BPDefOf.BadPeople_Karma.showOnNeedList = dev;
@@ -49,6 +50,7 @@ namespace BadPeople
                 }
                 ThingDefOf.Human.ResolveReferences();
             }
+#endif
         }
     }
 }
