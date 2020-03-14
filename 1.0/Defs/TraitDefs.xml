@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <TraitDef>
+    <defName>BadPeople_Evil</defName>
+    <commonality>0.2</commonality>
+    <degreeDatas>
+      <li>
+        <label>Depraved</label>
+        <description>{PAWN_nameDef} does not feel empathy for strangers. {PAWN_pronoun} can hurt them without feeling bad about it.</description>
+        <marketValueFactorOffset>0.15</marketValueFactorOffset>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>Psychopath</li>
+    </conflictingTraits>
+</TraitDef>
+</Defs>

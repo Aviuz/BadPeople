@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <NeedDef>
+    <defName>BadPeople_Karma</defName>
+    <needClass>BadPeople.Need_Karma</needClass>
+    <label>Karma</label>
+    <description>DEV: This need is only visible in DEV mode.\nIt displays progress of gaining/loosing "Evil" Trait</description>
+    <listPriority>9999999</listPriority>
+    <major>true</major>
+    <showForCaravanMembers>true</showForCaravanMembers>
+    <showOnNeedList>false</showOnNeedList>
+    <minIntelligence>Humanlike</minIntelligence>
+  </NeedDef>
+</Defs>
