@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <BadPeople_DebugITabName>BadPl-Dev</BadPeople_DebugITabName>
+
+  <BadPeople_TurnBadMessage>有时候生活能改变人 ...\n{0}, 因为在这个世界上看到可怕的事情而堕落.</BadPeople_TurnBadMessage>
+  <BadPeople_TurnGoodMessage>终于, {0} 放弃堕落的生活方式. 从现在开始 {0} 会努力让这个世界变得更美好.</BadPeople_TurnGoodMessage>
+  <BadPeople_TurnCannibalMessage>在吃了人肉后, {0} 尝到了这特别的肉.最后, {0} 变得想要更多.</BadPeople_TurnCannibalMessage>
+  <BadPeople_GainedTrait>{0} 获得 {1} 特性</BadPeople_GainedTrait>
+  <BadPeople_LostTrait>{0} 失去{1} 特性</BadPeople_LostTrait>
+
+  <BadPeople_Button_Details>Details</BadPeople_Button_Details>
+
+  <BadPeople_Log_ReleasingPrisoner>我亲眼看到囚犯被释放, 多么仁慈的行为</BadPeople_Log_ReleasingPrisoner>
+  <BadPeople_Log_WasReleased>他们把我从囚禁中释放出来</BadPeople_Log_WasReleased>
+  <BadPeople_Log_AcceptedRefugee>我的殖民地接受了难民</BadPeople_Log_AcceptedRefugee>
+  <BadPeople_Log_RescuedNonColonist>我救了陌生人/盟友</BadPeople_Log_RescuedNonColonist>
+  <BadPeople_Log_GainedAllies>我的殖民地获得了盟友</BadPeople_Log_GainedAllies>
+
+  <BadPeople_Log_FactionExecutedPrisoner>囚犯被处决</BadPeople_Log_FactionExecutedPrisoner>
+  <BadPeople_Log_ExecutedPrisoner>我处决了囚犯</BadPeople_Log_ExecutedPrisoner>
+  <BadPeople_Log_SoldPrisoner>我贩卖了囚犯</BadPeople_Log_SoldPrisoner>
+  <BadPeople_Log_KilledRelative>我为我的家人报仇了</BadPeople_Log_KilledRelative>
+  <BadPeople_Log_KilledFriend>我杀了朋友</BadPeople_Log_KilledFriend>
+  <BadPeople_Log_WasCaptured>我被囚禁了</BadPeople_Log_WasCaptured>
+  <BadPeople_Log_MyOrganHarvested>我的器官被切除了</BadPeople_Log_MyOrganHarvested>
+  <BadPeople_Log_HarvestedOrgan>我从别人身上摘取了器官</BadPeople_Log_HarvestedOrgan>
+  <BadPeople_Log_LostAllies>我的殖民地失去了盟友</BadPeople_Log_LostAllies>
+  <BadPeople_Log_WitnessedColonistDeath>我看到了殖民者的死亡</BadPeople_Log_WitnessedColonistDeath>
+</LanguageData>
