@@ -8,7 +8,7 @@
   <BadPeople_GainedTrait>{0} 获得 {1} 特性</BadPeople_GainedTrait>
   <BadPeople_LostTrait>{0} 失去{1} 特性</BadPeople_LostTrait>
 
-  <BadPeople_Button_Details>Details</BadPeople_Button_Details>
+  <BadPeople_Button_Details>细节</BadPeople_Button_Details>
 
   <BadPeople_Log_ReleasingPrisoner>我亲眼看到囚犯被释放, 多么仁慈的行为</BadPeople_Log_ReleasingPrisoner>
   <BadPeople_Log_WasReleased>他们把我从囚禁中释放出来</BadPeople_Log_WasReleased>
