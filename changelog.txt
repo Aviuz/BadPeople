@@ -1,4 +1,7 @@
 Changelog:
+1.2.1
+- updated Chineese translation by Cottery
+- fixed refugee quest by Hazzer
 1.2.0
 - updated to RimWorld 1.1
 1.1.7
