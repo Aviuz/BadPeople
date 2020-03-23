@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <BadPeople_Evil.degreeDatas.0.label>堕落</BadPeople_Evil.degreeDatas.0.label>
+  <BadPeople_Evil.degreeDatas.0.description>{PAWN_nameDef} 对他人没有同情心. {PAWN_pronoun} 对伤害他人不会感到难过</BadPeople_Evil.degreeDatas.0.description>
+
+
+</LanguageData>
