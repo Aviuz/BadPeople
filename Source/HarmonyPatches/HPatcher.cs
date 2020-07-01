@@ -21,7 +21,7 @@ namespace BadPeople.HarmonyPatches
             }
             catch (Exception e)
             {
-                Log.Error($"Bad People Mod Exception, failed to proceed harmony patches: {e.Message}");
+                Log.Error($"Bad People Mod Exception, failed to proceed harmony patches: {e.ToString()}");
             }
         }
 

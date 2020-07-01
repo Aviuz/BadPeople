@@ -71,8 +71,10 @@
     <Compile Include="CanibalismProgression.cs" />
     <Compile Include="ClassInjector.cs" />
     <Compile Include="Dialog_ActionList.cs" />
+    <Compile Include="HarmonyPatches\DebugMenuPatch.cs" />
     <Compile Include="HarmonyPatches\HPatcher.cs" />
     <Compile Include="HarmonyPatches\Patch_CannibalTick.cs" />
+    <Compile Include="HarmonyPatches\Patch_SetCurrentRefugee.cs" />
     <Compile Include="HarmonyPatches\Patch_ToggleDevMode.cs" />
     <Compile Include="HarmonyPatches\Patch_PawnAdditionalData.cs" />
     <Compile Include="HarmonyPatches\Patch_RemoveLoadedClassesWhenPawnDies.cs" />
@@ -86,6 +88,7 @@
     <Compile Include="HarmonyPatches\Trigger_ChangingAlliance.cs" />
     <Compile Include="Initialization.cs" />
     <Compile Include="ITab_DebugActivityLog.cs" />
+    <Compile Include="KinslayerProgression.cs" />
     <Compile Include="Need_Karma.cs" />
     <Compile Include="BPDefOf.cs" />
     <Compile Include="PointsTable.cs" />

@@ -11,6 +11,7 @@ namespace BadPeople
     public static class BPDefOf
     {
         public static TraitDef BadPeople_Evil;
+        public static TraitDef BadPeople_Kinslayer;
         public static NeedDef BadPeople_Karma;
     }
 }

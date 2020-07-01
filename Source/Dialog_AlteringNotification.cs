@@ -13,6 +13,7 @@ namespace BadPeople
         Bad,
         Good,
         Cannibal,
+        KinSlayer
     }
 
     public class Dialog_AlteringNotification : Window
@@ -66,6 +67,9 @@ namespace BadPeople
                     break;
                 case AlterType.Cannibal:
                     message = "BadPeople_TurnCannibalMessage";
+                    break;
+                case AlterType.KinSlayer:
+                    message = "BadPeople_TurnKinSlayer";
                     break;
             }
             listing.Label(message.Translate(pawn.Name.ToStringShort));

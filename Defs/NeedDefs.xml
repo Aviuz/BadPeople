@@ -5,10 +5,11 @@
     <needClass>BadPeople.Need_Karma</needClass>
     <label>Karma</label>
     <description>DEV: This need is only visible in DEV mode.\nIt displays progress of gaining/loosing "Evil" Trait</description>
-    <listPriority>9999999</listPriority>
+    <listPriority>49</listPriority>
     <major>true</major>
-    <showForCaravanMembers>true</showForCaravanMembers>
+    <showForCaravanMembers>false</showForCaravanMembers>
     <showOnNeedList>false</showOnNeedList>
     <minIntelligence>Humanlike</minIntelligence>
+    <colonistsOnly>false</colonistsOnly>
   </NeedDef>
 </Defs>
