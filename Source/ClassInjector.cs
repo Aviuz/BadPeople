@@ -40,8 +40,12 @@ namespace BadPeople
         {
            foreach(PawnRelationDef def in DefDatabase<PawnRelationDef>.AllDefs)
            {
+
                 if (def.familyByBloodRelation)
                 {
+#if DEBUG
+                    Log.Message($"Patching: {def}, family by blood: {def.familyByBloodRelation}");
+#endif
                     addKinSlayer(def.killedThought);
                     addKinSlayer(def.killedThoughtFemale);
                     addKinSlayer(def.diedThought);
@@ -55,8 +59,18 @@ namespace BadPeople
         {
             if (def != null)
             {
-                def.nullifyingTraits?.Add(BPDefOf.BadPeople_Kinslayer);
+                if(def.nullifyingTraits == null)
+                {
+                    def.nullifyingTraits = new List<TraitDef>();
+                }
+                if (!def.nullifyingTraits.Contains(BPDefOf.BadPeople_Kinslayer))
+                {
+                def.nullifyingTraits.Add(BPDefOf.BadPeople_Kinslayer);
+                }
                 def.ResolveReferences();
+#if DEBUG
+                Log.Message($"Patching: {def}, size: {def.nullifyingTraits.Count}");
+#endif
             }
 
         }
@@ -83,15 +97,6 @@ namespace BadPeople
 
                     }
                 }
-/*                if (dev)
-                {
-                    ThingDefOf.Human.inspectorTabs.Add(typeof(ITab_DebugActivityLog));
-                }
-                else
-                {
-                    ThingDefOf.Human.inspectorTabs.Remove(typeof(ITab_DebugActivityLog));
-                }
-                ThingDefOf.Human.ResolveReferences();*/
             }
 #endif
         }

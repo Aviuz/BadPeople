@@ -53,7 +53,7 @@ namespace BadPeople
         {
             if (!Locked)
             {
-                var chance = kinSlayed * 0.01f;
+                var chance = kinSlayed * 0.1f;
                 Log.Message($"[BadPeople] {pawn} try become kinslayer chance: {chance}");
 
                 var value = UnityEngine.Random.Range(0.0f, 1.0f);
