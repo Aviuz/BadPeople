@@ -32,23 +32,71 @@ namespace BadPeople
             if (!psychopathTrait.conflictingTraits.Contains(BPDefOf.BadPeople_Evil))
                 psychopathTrait.conflictingTraits.Add(BPDefOf.BadPeople_Evil);
             psychopathTrait.ResolveReferences();
+
+            KinslayerInitialize();
         }
 
+        private static void KinslayerInitialize()
+        {
+           foreach(PawnRelationDef def in DefDatabase<PawnRelationDef>.AllDefs)
+           {
+
+                if (def.familyByBloodRelation)
+                {
+#if DEBUG
+                    Log.Message($"Patching: {def}, family by blood: {def.familyByBloodRelation}");
+#endif
+                    addKinSlayer(def.killedThought);
+                    addKinSlayer(def.killedThoughtFemale);
+                    addKinSlayer(def.diedThought);
+                    addKinSlayer(def.diedThoughtFemale);
+                }
+
+           }
+        }
+
+        private static void addKinSlayer(ThoughtDef def)
+        {
+            if (def != null)
+            {
+                if(def.nullifyingTraits == null)
+                {
+                    def.nullifyingTraits = new List<TraitDef>();
+                }
+                if (!def.nullifyingTraits.Contains(BPDefOf.BadPeople_Kinslayer))
+                {
+                def.nullifyingTraits.Add(BPDefOf.BadPeople_Kinslayer);
+                }
+                def.ResolveReferences();
+#if DEBUG
+                Log.Message($"Patching: {def}, size: {def.nullifyingTraits.Count}");
+#endif
+            }
+
+        }
         public static void EnableDevMode(bool dev)
         {
 #if DEBUG
             if (dev != BPDefOf.BadPeople_Karma.showOnNeedList)
             {
                 BPDefOf.BadPeople_Karma.showOnNeedList = dev;
-                if (dev)
+                Log.Message($"[Bad people] dev mode: {dev}, Show karma: {BPDefOf.BadPeople_Karma.showOnNeedList}");
+                foreach(ThingDef def in DefDatabase<ThingDef>.AllDefs)
                 {
-                    ThingDefOf.Human.inspectorTabs.Add(typeof(ITab_DebugActivityLog));
+                    if(def.race != null && def.race.intelligence == Intelligence.Humanlike)
+                    {
+                        if (dev) { 
+                            def.inspectorTabs.Add(typeof(ITab_DebugActivityLog));
+                        }
+                        else
+                        {
+                            def.inspectorTabs.Remove(typeof(ITab_DebugActivityLog));
+                        }
+
+                        def.ResolveReferences();
+
+                    }
                 }
-                else
-                {
-                    ThingDefOf.Human.inspectorTabs.Remove(typeof(ITab_DebugActivityLog));
-                }
-                ThingDefOf.Human.ResolveReferences();
             }
 #endif
         }

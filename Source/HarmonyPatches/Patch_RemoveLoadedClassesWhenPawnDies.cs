@@ -14,6 +14,7 @@ namespace BadPeople.HarmonyPatches
         {
             CanibalismProgression.DeleteKey(__instance);
             ActionLog.DeleteKey(__instance);
+            KinslayerProgression.DeleteKey(__instance);
         }
     }
 }

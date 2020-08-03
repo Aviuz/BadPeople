@@ -14,6 +14,7 @@ namespace BadPeople.HarmonyPatches
         {
             CanibalismProgression.For(__instance).ExposeData();
             ActionLog.For(__instance).ExposeData();
+            KinslayerProgression.For(__instance).ExposeData();
         }
     }
 }
