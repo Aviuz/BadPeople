@@ -46,6 +46,7 @@ namespace BadPeople.Settings
         {
             BPSettings.DebugTabVisible = showDebugTab;
             BPSettings.Save();
+            ClassInjector.HandleTabVisible(Prefs.DevMode);
             Log.Message("Bad People settings saved");
         }
 

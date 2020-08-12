@@ -39,8 +39,8 @@ namespace BadPeople
 
         private static void KinslayerInitialize()
         {
-           foreach(PawnRelationDef def in DefDatabase<PawnRelationDef>.AllDefs)
-           {
+            foreach (PawnRelationDef def in DefDatabase<PawnRelationDef>.AllDefs)
+            {
 
                 if (def.familyByBloodRelation)
                 {
@@ -53,20 +53,20 @@ namespace BadPeople
                     addKinSlayer(def.diedThoughtFemale);
                 }
 
-           }
+            }
         }
 
         private static void addKinSlayer(ThoughtDef def)
         {
             if (def != null)
             {
-                if(def.nullifyingTraits == null)
+                if (def.nullifyingTraits == null)
                 {
                     def.nullifyingTraits = new List<TraitDef>();
                 }
                 if (!def.nullifyingTraits.Contains(BPDefOf.BadPeople_Kinslayer))
                 {
-                def.nullifyingTraits.Add(BPDefOf.BadPeople_Kinslayer);
+                    def.nullifyingTraits.Add(BPDefOf.BadPeople_Kinslayer);
                 }
                 def.ResolveReferences();
 #if DEBUG
@@ -83,30 +83,30 @@ namespace BadPeople
                 BPDefOf.BadPeople_Karma.showOnNeedList = dev;
                 Log.Message($"[Bad people] dev mode: {dev}, Show karma: {BPDefOf.BadPeople_Karma.showOnNeedList}");
 
-                if (BPSettings.DebugTabVisible)
-                {
-                    foreach (ThingDef def in DefDatabase<ThingDef>.AllDefs)
-                    {
-                        if (def.race != null && def.race.intelligence == Intelligence.Humanlike)
-                        {
-                            if (dev)
-                            {
-                                def.inspectorTabs.Add(typeof(ITab_DebugActivityLog));
-                    {
-                        if (dev) { 
-                            def.inspectorTabs.Add(typeof(ITab_DebugActivityLog));
-                            }
-                            else
-                            {
-                                def.inspectorTabs.Remove(typeof(ITab_DebugActivityLog));
-                            }
+                HandleTabVisible(dev);
+#endif                
+            }
+        }
 
-                            def.ResolveReferences();
-                        }
+        public static void HandleTabVisible(bool dev)
+        {
+            foreach (ThingDef def in DefDatabase<ThingDef>.AllDefs)
+            {
+                if (def.race != null && def.race.intelligence == Intelligence.Humanlike)
+                {
+
+                    if (dev && BPSettings.DebugTabVisible)
+                    {
+                        def.inspectorTabs.Add(typeof(ITab_DebugActivityLog));
+                        def.ResolveReferences();
+                    }                    
+                    else
+                    {
+                        def.inspectorTabs.Remove(typeof(ITab_DebugActivityLog));
+                        def.ResolveReferences();
                     }
                 }
             }
-#endif
         }
     }
 }

@@ -24,7 +24,7 @@ namespace BadPeople.Settings
             }
             set
             {
-                data.displayDebugPawnTab = value;
+                data.displayDebugPawnTab = value;                
             }
          }
 

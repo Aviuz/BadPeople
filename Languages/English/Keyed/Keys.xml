@@ -30,4 +30,6 @@
 
   <BadPeople_ShowDebugTab>Show Debug Pawn Tab</BadPeople_ShowDebugTab>
   <BadPeople_ShowDebugTabDesc>Show debug pawn tab with karma change log</BadPeople_ShowDebugTabDesc>
+
+  <ProblemSavingFile>Can't save settings file</ProblemSavingFile>
 </LanguageData>

@@ -8,6 +8,6 @@ namespace BadPeople.Settings
 {
     class BadPeoplePerfsData
     {
-        public bool displayDebugPawnTab = true;
+        public bool displayDebugPawnTab = false;
     }
 }
