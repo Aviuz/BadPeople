@@ -90,6 +90,9 @@
     <Compile Include="BPDefOf.cs" />
     <Compile Include="PointsTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\BadPeoplePerfsData.cs" />
+    <Compile Include="Settings\BPSettings.cs" />
+    <Compile Include="Settings\SettingsMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\About\About.xml">

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BadPeople.Settings;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,8 @@ namespace BadPeople
             {
                 HarmonyPatches.HPatcher.Init();
                 ClassInjector.Initialize();
+                BPSettings.Init();
+                SettingsMenu.Init();
 
                 ClassInjector.EnableDevMode(Prefs.DevMode);
             }

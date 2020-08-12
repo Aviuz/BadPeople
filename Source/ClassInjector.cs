@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using BadPeople.Settings;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,15 +41,27 @@ namespace BadPeople
             if (dev != BPDefOf.BadPeople_Karma.showOnNeedList)
             {
                 BPDefOf.BadPeople_Karma.showOnNeedList = dev;
-                if (dev)
+                Log.Message($"Bad People debug status {dev}");
+
+                if (BPSettings.DebugTabVisible)
                 {
-                    ThingDefOf.Human.inspectorTabs.Add(typeof(ITab_DebugActivityLog));
+                    foreach (ThingDef def in DefDatabase<ThingDef>.AllDefs)
+                    {
+                        if (def.race != null && def.race.intelligence == Intelligence.Humanlike)
+                        {
+                            if (dev)
+                            {
+                                def.inspectorTabs.Add(typeof(ITab_DebugActivityLog));
+                            }
+                            else
+                            {
+                                def.inspectorTabs.Remove(typeof(ITab_DebugActivityLog));
+                            }
+
+                            def.ResolveReferences();
+                        }
+                    }
                 }
-                else
-                {
-                    ThingDefOf.Human.inspectorTabs.Remove(typeof(ITab_DebugActivityLog));
-                }
-                ThingDefOf.Human.ResolveReferences();
             }
 #endif
         }
