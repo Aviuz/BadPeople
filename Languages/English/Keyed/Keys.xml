@@ -5,6 +5,7 @@
   <BadPeople_TurnBadMessage>Sometimes life can change people ...\n{0}, after seeing horrible things on this world, has become depraved person.</BadPeople_TurnBadMessage>
   <BadPeople_TurnGoodMessage>Finally, {0} gave up the immoral lifestyle. From now on {0} will try to make this world a better place.</BadPeople_TurnGoodMessage>
   <BadPeople_TurnCannibalMessage>After consuming human flesh, {0} tasted in this special meal. Eventually, {0} would like more of it.</BadPeople_TurnCannibalMessage>
+  <BadPeople_TurnKinSlayer>{0} thinks that family is overrated. Dead of another member of family won't affect {0}</BadPeople_TurnKinSlayer>
   <BadPeople_GainedTrait>{0} gained {1} trait</BadPeople_GainedTrait>
   <BadPeople_LostTrait>{0} lost {1} trait</BadPeople_LostTrait>
 

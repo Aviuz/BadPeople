@@ -13,5 +13,18 @@
     <conflictingTraits>
       <li>Psychopath</li>
     </conflictingTraits>
-</TraitDef>
+   </TraitDef>
+   <TraitDef>
+    <defName>BadPeople_Kinslayer</defName>
+    <commonality>0.1</commonality>
+    <degreeDatas>
+      <li>
+        <label>Kinslayer</label>
+        <description>{PAWN_nameDef} kills so many relatives. Another dead kin is just a number.</description>
+      </li>
+    </degreeDatas>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </TraitDef>
 </Defs>

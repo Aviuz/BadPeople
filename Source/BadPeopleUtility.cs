@@ -61,7 +61,13 @@ namespace BadPeople
 
                 // Relative
                 if (killer.relations != null && killer.relations.FamilyByBlood.Contains(pawn))
+                {
                     AddPoints(killer, PointsTable.KilledRelative, "BadPeople_Log_KilledRelative".Translate());
+                    KinslayerProgression kinslayerProgression = KinslayerProgression.For(killer);
+                    kinslayerProgression.Increment();
+                    kinslayerProgression.TryBecomeKinSlayer();                
+
+                }
 
                 // Friend
                 if (killer.relations != null && killer.relations.OpinionOf(pawn) >= 20)
