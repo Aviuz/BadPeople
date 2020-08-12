@@ -71,7 +71,6 @@
     <Compile Include="CanibalismProgression.cs" />
     <Compile Include="ClassInjector.cs" />
     <Compile Include="Dialog_ActionList.cs" />
-    <Compile Include="HarmonyPatches\DebugMenuPatch.cs" />
     <Compile Include="HarmonyPatches\HPatcher.cs" />
     <Compile Include="HarmonyPatches\Patch_CannibalTick.cs" />
     <Compile Include="HarmonyPatches\Patch_SetCurrentRefugee.cs" />
@@ -93,6 +92,9 @@
     <Compile Include="BPDefOf.cs" />
     <Compile Include="PointsTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\BadPeoplePerfsData.cs" />
+    <Compile Include="Settings\BPSettings.cs" />
+    <Compile Include="Settings\SettingsMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\About\About.xml">

@@ -27,4 +27,9 @@
   <BadPeople_Log_HarvestedOrgan>I harvested organ from a human</BadPeople_Log_HarvestedOrgan>
   <BadPeople_Log_LostAllies>My faction lost allies</BadPeople_Log_LostAllies>
   <BadPeople_Log_WitnessedColonistDeath>I saw one of my people die</BadPeople_Log_WitnessedColonistDeath>
+
+  <BadPeople_ShowDebugTab>Show Debug Pawn Tab</BadPeople_ShowDebugTab>
+  <BadPeople_ShowDebugTabDesc>Show debug pawn tab with karma change log</BadPeople_ShowDebugTabDesc>
+
+  <ProblemSavingFile>Can't save settings file</ProblemSavingFile>
 </LanguageData>

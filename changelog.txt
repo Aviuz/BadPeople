@@ -1,4 +1,7 @@
 Changelog:
+1.2.3
+- Added option in setting to turn off debug pawn tab
+- Update to version 1.2 of Rimworld
 1.2.2
 - Added new trait - Kinslayer. Pawn should get Kinslayer trait after killing up to 10 blood relatives.
 - Kinslayer trait negates mood debuff after blood relatives death.
