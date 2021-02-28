@@ -1,12 +1,7 @@
-﻿using RimWorld;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using BadPeople.Settings;
+using RimWorld;
 using UnityEngine;
 using Verse;
-using Verse.Sound;
 
 namespace BadPeople
 {
@@ -24,6 +19,8 @@ namespace BadPeople
             this.size = WinSize;
             this.labelKey = "BadPeople_DebugITabName";
         }
+
+        public override bool IsVisible => Prefs.DevMode && BPSettings.DebugTabVisible;
 
         protected override void FillTab()
         {
