@@ -1,9 +1,6 @@
-﻿using BadPeople.Settings;
-using RimWorld;
-using System;
+﻿using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Verse;
 
 namespace BadPeople
@@ -35,6 +32,17 @@ namespace BadPeople
             psychopathTrait.ResolveReferences();
 
             KinslayerInitialize();
+
+            // Adding Debug tab to all pawns, visibility resolved internally, later.
+            foreach (ThingDef t in DefDatabase<ThingDef>.AllDefs.Where(def => def.race != null && def.race.intelligence == Intelligence.Humanlike))
+            {
+                if (t.inspectorTabsResolved == null)
+                {
+                    t.inspectorTabsResolved = new List<InspectTabBase>(1);
+                }
+                t.inspectorTabsResolved.Add(InspectTabManager.GetSharedInstance(typeof(ITab_DebugActivityLog)));
+            }
+            InspectPaneUtility.Reset();
         }
 
         private static void KinslayerInitialize()
@@ -82,30 +90,7 @@ namespace BadPeople
             {
                 BPDefOf.BadPeople_Karma.showOnNeedList = dev;
                 Log.Message($"[Bad people] dev mode: {dev}, Show karma: {BPDefOf.BadPeople_Karma.showOnNeedList}");
-
-                HandleTabVisible(dev);
 #endif                
-            }
-        }
-
-        public static void HandleTabVisible(bool dev)
-        {
-            foreach (ThingDef def in DefDatabase<ThingDef>.AllDefs)
-            {
-                if (def.race != null && def.race.intelligence == Intelligence.Humanlike)
-                {
-
-                    if (dev && BPSettings.DebugTabVisible)
-                    {
-                        def.inspectorTabs.Add(typeof(ITab_DebugActivityLog));
-                        def.ResolveReferences();
-                    }                    
-                    else
-                    {
-                        def.inspectorTabs.Remove(typeof(ITab_DebugActivityLog));
-                        def.ResolveReferences();
-                    }
-                }
             }
         }
     }
