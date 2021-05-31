@@ -1,6 +1,6 @@
 Changelog:
 1.2.4
-- Fixes for eating strage things. Like bone narrow or cans. 
+- Fixes for eating strange things. Like bone narrow or cans. 
 - Moved statistics from save data to records. Should not break saves.
 - Butchering humanlike actually counts to progressing depraved trait. Unknown pawn gives 1%, known 5%.
 - Changed rendering of debug window. (https://github.com/jptrrs)
