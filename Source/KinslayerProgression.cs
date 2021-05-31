@@ -17,6 +17,13 @@ namespace BadPeople
             LoadedClasses.Remove(pawn);
         }
 
+        public static void Update()
+        {
+            foreach (var entry in LoadedClasses)
+            {
+                entry.Value.update();
+            }
+        }
         public static KinslayerProgression For(Pawn pawn)
         {
             if (!LoadedClasses.ContainsKey(pawn))
@@ -25,35 +32,48 @@ namespace BadPeople
         }
 
         private int kinSlayed;
+        private int actualValue => pawn.records.GetAsInt(BPDefOf.BadPeople_CountOfKilledRelatives);
         private Pawn pawn;
 
-        public bool Locked { get; set; }
+        private bool Locked { get; set; }
 
-        public void Increment()
+        private void update()
         {
-            kinSlayed++;
+            if (actualValue < kinSlayed)
+            {
+                pawn.records.AddTo(BPDefOf.BadPeople_CountOfKilledRelatives, Math.Max(0, kinSlayed - actualValue));
+                Log.Message($"Updating pawn: {pawn.NameShortColored} Killed relatives with value { Math.Max(0, kinSlayed - actualValue)} ");
+            }
+        }
+
+        public void ProgressWithTrait()
+        {
+           // update(); //compatibility
+            Increment();
+            TryBecomeKinSlayer();
+        }
+        private void Increment()
+        {
+            pawn.records.Increment(BPDefOf.BadPeople_CountOfKilledRelatives);
             Log.Message($"[BadPeople] Increment kinslayer for {pawn}, value {kinSlayed}");
         }
 
-        public KinslayerProgression(Pawn pawn)
+        private KinslayerProgression(Pawn pawn)
         {
             this.pawn = pawn;
-            if (!pawn.RaceProps.Humanlike || pawn.story.traits.HasTrait(BPDefOf.BadPeople_Kinslayer))
-                Locked = true;
-            else
-                Locked = false;
+            Locked = !pawn.RaceProps.Humanlike || pawn.story.traits.HasTrait(BPDefOf.BadPeople_Kinslayer);
             kinSlayed = 0;
         }
         public void ExposeData()
         {
-            Scribe_Values.Look<int>(ref this.kinSlayed, "BadPeople_KinSlayed", 0, false);
+            Scribe_Values.Look<int>(ref this.kinSlayed, "BadPeople_KinSlayed", 0, false);            
         }
 
-        public void TryBecomeKinSlayer()
+        private void TryBecomeKinSlayer()
         {
             if (!Locked)
             {
-                var chance = kinSlayed * 0.1f;
+                var chance = actualValue * 0.1f;
                 Log.Message($"[BadPeople] {pawn} try become kinslayer chance: {chance}");
 
                 var value = UnityEngine.Random.Range(0.0f, 1.0f);

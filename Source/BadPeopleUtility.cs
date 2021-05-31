@@ -47,6 +47,14 @@ namespace BadPeople
             {
                 AddPoints(pawn, PointsTable.MyOrganHarvested, "BadPeople_Log_MyOrganHarvested".Translate());
             }
+            else if (thought.def == ThoughtDefOf.ButcheredHumanlikeCorpse)
+            {
+                AddPoints(pawn, PointsTable.HumanlikeButchered, "BadPeople_Log_ButcheredHumanlike".Translate());
+            }
+            else if (thought.def == ThoughtDefOf.KnowButcheredHumanlikeCorpse)
+            {
+                AddPoints(pawn, PointsTable.KnownHumanlikeButchered, "BadPeople_Log_ButcheredKnownHumanlike".Translate());
+            }
         }
 
         public static void NotifyPawnKilled(Pawn pawn, DamageInfo? dinfo, Hediff hediff)
@@ -64,8 +72,7 @@ namespace BadPeople
                 {
                     AddPoints(killer, PointsTable.KilledRelative, "BadPeople_Log_KilledRelative".Translate());
                     KinslayerProgression kinslayerProgression = KinslayerProgression.For(killer);
-                    kinslayerProgression.Increment();
-                    kinslayerProgression.TryBecomeKinSlayer();                
+                    kinslayerProgression.ProgressWithTrait();                                    
 
                 }
 
