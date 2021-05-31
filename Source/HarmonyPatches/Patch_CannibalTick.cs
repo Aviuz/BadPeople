@@ -17,7 +17,7 @@ namespace BadPeople.HarmonyPatches
             {
                 bool isHumanLike = false;
 
-                if (FoodUtility.IsHumanlikeMeat(__instance.def))
+                if (__instance.def != null && __instance.def.IsIngestible && FoodUtility.IsHumanlikeMeat(__instance.def))
                 {
                     isHumanLike = true;
                 }
@@ -28,7 +28,7 @@ namespace BadPeople.HarmonyPatches
                     {
                         foreach (var ing in compIngredients.ingredients)
                         {
-                            if (FoodUtility.IsHumanlikeMeat(ing))
+                            if (ing != null && ing.IsIngestible && FoodUtility.IsHumanlikeMeat(ing))
                             {
                                 isHumanLike = true;
                                 break;
@@ -40,11 +40,7 @@ namespace BadPeople.HarmonyPatches
                 if (isHumanLike && ingester.RaceProps.Humanlike)
                 {
                     var progress = CanibalismProgression.For(ingester);
-                    if (!progress.Locked)
-                    {
-                        progress.Add(__result);
-                        progress.TryBecomeCannibal();
-                    }
+                    progress.ProgressWithTrait(__result);
                 }
             }
         }
