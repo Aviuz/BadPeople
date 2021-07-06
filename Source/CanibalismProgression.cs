@@ -43,7 +43,7 @@ namespace BadPeople
         public CanibalismProgression(Pawn pawn)
         {
             this.pawn = pawn;
-            Locked = !pawn.RaceProps.Humanlike || pawn.story.traits.HasTrait(TraitDefOf.Cannibal);
+            Locked = !pawn.RaceProps.Humanlike || pawn.story.traits.HasTrait(TraitDefOf.Cannibal) || HunamoidRaceCheck.IsCannibalByRace(pawn.kindDef.race.defName);
             fleshAmount = 0;
         }
         public void ProgressWithTrait(float nutrition)
@@ -79,8 +79,6 @@ namespace BadPeople
         {
             pawn.records.Increment(BPDefOf.BadPeople_CountOfEatenCorpses);
             pawn.records.AddTo(BPDefOf.BadPeople_CountOfFleshEaten, nutrition);
-/*            corpseCount++;
-            fleshAmount += nutrition;*/
         }
 
         private void TryBecomeCannibal()

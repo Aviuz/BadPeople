@@ -11,13 +11,12 @@ namespace BadPeople
     public class Need_Karma : Need
     {
         // Will degradate at rate 10% every 3 days, or 100% every 30 days.
-        public const double Degradation = 1f / (30f * GenDate.TicksPerDay / 150f); // Need.NeedInterval() is triggered every 150 ticks 
+        public const float Degradation = 1f / (30f * GenDate.TicksPerDay / 150f); // Need.NeedInterval() is triggered every 150 ticks 
         public const float BecomeGoodLevel = 0.5f;
         public const float NeutralLevel = 1.5f;
         public const float BecomeEvilLevel = 2.5f;
 
         private bool readyForChange = true;
-        private double _curLevel;
 
         public override float MaxLevel => 3f;
 
@@ -25,11 +24,9 @@ namespace BadPeople
 
         public bool Extremist => CurLevel < BecomeGoodLevel || CurLevel > BecomeEvilLevel ? true : false;
 
-        public override float CurLevel { get => (float)_curLevel; set => _curLevel = value; }
 
         public Need_Karma(Pawn pawn) : base(pawn)
         {
-            _curLevel = CurLevel;
         }
 
         public override void SetInitialLevel()
@@ -41,10 +38,10 @@ namespace BadPeople
         {
             if (!Extremist)
             {
-                if (_curLevel > NeutralLevel)
-                    _curLevel -= Degradation;
-                else if (_curLevel < NeutralLevel)
-                    _curLevel += Degradation;
+                if (CurLevel > NeutralLevel)
+                    CurLevel -= Degradation;
+                else if (CurLevel < NeutralLevel)
+                    CurLevel += Degradation;
             }
 
             if (!readyForChange)
@@ -91,7 +88,6 @@ namespace BadPeople
 
         public override void ExposeData()
         {
-            base.CurLevel = CurLevel;
             base.ExposeData();
         }
 

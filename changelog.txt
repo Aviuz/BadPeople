@@ -1,4 +1,7 @@
 Changelog:
+1.2.5
+- Races with integrated cannibalism should not be considered to gain the trait (e.g. Goblins from Forgotten Realms)
+- Karma need bar should not extend max value on GUI.
 1.2.4
 - Fixes for eating strange things. Like bone narrow or cans. 
 - Moved statistics from save data to records. Should not break saves.
