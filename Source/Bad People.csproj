@@ -86,6 +86,7 @@
     <Compile Include="HarmonyPatches\Trigger_ThoughtAdded.cs" />
     <Compile Include="HarmonyPatches\Trigger_Kill.cs" />
     <Compile Include="HarmonyPatches\Trigger_ChangingAlliance.cs" />
+    <Compile Include="HunamoidRaceCheck.cs" />
     <Compile Include="Initialization.cs" />
     <Compile Include="ITab_DebugActivityLog.cs" />
     <Compile Include="KinslayerProgression.cs" />

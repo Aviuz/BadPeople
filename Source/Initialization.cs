@@ -18,7 +18,7 @@ namespace BadPeople
                 ClassInjector.Initialize();
                 BPSettings.Init();
                 SettingsMenu.Init();
-
+                HunamoidRaceCheck.SearchMod();
                 ClassInjector.EnableDevMode(Prefs.DevMode);
             }
             catch (Exception e)

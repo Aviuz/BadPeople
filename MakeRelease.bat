@@ -23,6 +23,10 @@ xcopy "Defs\*.*" "%target_directory%\Defs" /e
 mkdir "%target_directory%\Languages"
 xcopy "Languages\*.*" "%target_directory%\Languages" /e
 
+::Xml Patches
+mkdir "%target_directory%\Patches"
+xcopy "Patches\*.*" "%target_directory%\Patches" /e
+
 :: Textures
 mkdir "%target_directory%\Textures"
 xcopy "Textures\*.*" "%target_directory%\Textures" /e
