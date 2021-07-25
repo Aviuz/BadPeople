@@ -17,25 +17,11 @@ namespace BadPeople.HarmonyPatches
             {
                 bool isHumanLike = false;
 
-                if (__instance.def != null && __instance.def.IsIngestible && FoodUtility.IsHumanlikeMeat(__instance.def))
+                if (__instance.def != null && __instance.def.IsIngestible)
                 {
-                    isHumanLike = true;
+                    isHumanLike = FoodUtility.IsHumanlikeCorpseOrHumanlikeMeatOrIngredient(__instance);
                 }
-                else
-                {
-                    CompIngredients compIngredients = __instance.TryGetComp<CompIngredients>();
-                    if (compIngredients != null)
-                    {
-                        foreach (var ing in compIngredients.ingredients)
-                        {
-                            if (ing != null && ing.IsIngestible && FoodUtility.IsHumanlikeMeat(ing))
-                            {
-                                isHumanLike = true;
-                                break;
-                            }
-                        }
-                    }
-                }
+               
 
                 if (isHumanLike && ingester.RaceProps.Humanlike)
                 {

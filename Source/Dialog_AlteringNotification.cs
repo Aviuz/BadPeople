@@ -48,7 +48,7 @@ namespace BadPeople
             GUI.BeginGroup(mainRect);
 
             GUI.BeginGroup(imageRect);
-            var texture = PortraitsCache.Get(pawn, ColonistBarColonistDrawer.PawnTextureSize);
+            var texture = PortraitsCache.Get(pawn, ColonistBarColonistDrawer.PawnTextureSize, Rot4.South);
             float scalledWidth = imageRect.height / ColonistBarColonistDrawer.PawnTextureSize.y * ColonistBarColonistDrawer.PawnTextureSize.x;
             var scalledRect = new Rect(imageRect.width - scalledWidth, 0, scalledWidth, imageRect.height);
             GUI.DrawTexture(new Rect(18, 0, imageRect.width - 36, imageRect.height), texture);
