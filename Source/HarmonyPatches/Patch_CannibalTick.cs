@@ -13,7 +13,7 @@ namespace BadPeople.HarmonyPatches
     {
         static void Postfix(Thing __instance, float __result, Pawn ingester, float nutritionWanted)
         {
-            if (__result > 0)
+            if (ingester.RaceProps.Humanlike && __result > 0)
             {
                 bool isHumanLike = false;
 
@@ -23,7 +23,7 @@ namespace BadPeople.HarmonyPatches
                 }
                
 
-                if (isHumanLike && ingester.RaceProps.Humanlike)
+                if (isHumanLike)
                 {
                     var progress = CanibalismProgression.For(ingester);
                     progress.ProgressWithTrait(__result);
