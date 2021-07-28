@@ -1,6 +1,8 @@
 Changelog:
 1.3.0
 - Update to Rimworld 1.3
+- Typo fixes
+- Nerfed points for humanoid butchering
 1.2.5
 - Races with integrated cannibalism should not be considered to gain the trait (e.g. Goblins from Forgotten Realms)
 - Karma need bar should not extend max value on GUI.
