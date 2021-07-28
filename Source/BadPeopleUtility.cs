@@ -82,7 +82,7 @@ namespace BadPeople
             }
         }
 
-        public static void NotifyPawnGetReleased(Pawn prisoner, Faction hostFaction)
+        public static void NotifyPawnGetReleased(Pawn prisoner)
         {
             AddPoints(prisoner, PointsTable.WasReleased, "BadPeople_Log_WasReleased".Translate());
             foreach (var pawn in prisoner.Map.mapPawns.FreeColonistsAndPrisoners)

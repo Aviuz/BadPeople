@@ -17,8 +17,8 @@ namespace BadPeople
         public static float MyOrganHarvested = 0.4f;
         public static float HarvestedOrgan = 0.15f;
         public static float LostAllies = 0.1f;
-        public static float HumanlikeButchered = 0.01f;
-        public static float KnownHumanlikeButchered = 0.05f;
+        public static float HumanlikeButchered = 0.02f;
+        public static float KnownHumanlikeButchered = 0.01f;
 
         public static float WasReleased = -0.1f;
         public static float FactionReleasedPrisoner = -0.1f;

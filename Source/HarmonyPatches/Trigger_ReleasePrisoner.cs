@@ -8,12 +8,12 @@ using Verse;
 
 namespace BadPeople.HarmonyPatches
 {
-    [HarmonyPatch(typeof(GenGuest), "PrisonerRelease")]
+    [HarmonyPatch(typeof(GenGuest), "GuestRelease")]
     static class Trigger_ReleasePrisoner
     {
         static void Prefix(Pawn p)
         {
-            BadPeopleUtility.NotifyPawnGetReleased(p, p.guest.HostFaction);
+            BadPeopleUtility.NotifyPawnGetReleased(p);
         }
     }
 }

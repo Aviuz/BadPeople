@@ -3,7 +3,7 @@
 </p>
 <p align="center">
   <a href="https://github.com/Aviuz/BadPeople/releases">
-    <img src="https://img.shields.io/badge/version-1.2.5-red.svg?style=flat" alt="v1.2.5" />
+    <img src="https://img.shields.io/badge/version-1.3.0-red.svg?style=flat" alt="v1.3.0" />
   </a>
 </p>
 

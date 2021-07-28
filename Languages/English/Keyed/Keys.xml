@@ -28,7 +28,7 @@
   <BadPeople_Log_LostAllies>My faction lost allies</BadPeople_Log_LostAllies>
   <BadPeople_Log_WitnessedColonistDeath>I saw one of my people die</BadPeople_Log_WitnessedColonistDeath>
   <BadPeople_Log_ButcheredHumanlike>I butchered person</BadPeople_Log_ButcheredHumanlike>
-  <BadPeople_Log_ButcheredKnownHumanlike>I butchered a person that I used to know</BadPeople_Log_ButcheredKnownHumanlike>
+  <BadPeople_Log_ButcheredKnownHumanlike>We butchered a person that I used to know</BadPeople_Log_ButcheredKnownHumanlike>
 
   <BadPeople_ShowDebugTab>Show Debug Pawn Tab</BadPeople_ShowDebugTab>
   <BadPeople_ShowDebugTabDesc>Show debug pawn tab with karma change log</BadPeople_ShowDebugTabDesc>
