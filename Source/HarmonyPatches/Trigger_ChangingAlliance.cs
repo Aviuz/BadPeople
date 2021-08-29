@@ -25,8 +25,12 @@ namespace BadPeople.HarmonyPatches
             }
         }
 
-        static bool Prerequirments(Faction faction, Faction other, float goodwillChange)
+        static bool Prerequirments(Faction faction, Faction other, int goodwillChange)
         {
+            if (!faction.CanChangeGoodwillFor(other, goodwillChange))
+            {
+                return false;
+            }
             if (faction.def.hidden || other.def.hidden)
             {
                 return false;
