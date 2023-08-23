@@ -8,27 +8,39 @@ using Verse;
 
 namespace BadPeople.HarmonyPatches
 {
-    [HarmonyPatch(typeof(Thing), "Ingested")]
-    class Patch_CannibalTick
+  [HarmonyPatch(typeof(Thing), "Ingested")]
+  class Patch_CannibalTick
+  {
+    static void Postfix(Thing __instance, float __result, Pawn ingester, float nutritionWanted)
     {
-        static void Postfix(Thing __instance, float __result, Pawn ingester, float nutritionWanted)
+      if (ingester.RaceProps.Humanlike && __result > 0)
+      {
+        bool isHumanLike = false;
+
+        if (__instance.def != null && ShouldProcess(__instance))
         {
-            if (ingester.RaceProps.Humanlike && __result > 0)
-            {
-                bool isHumanLike = false;
-
-                if (__instance.def != null && __instance.def.IsIngestible)
-                {
-                    isHumanLike = FoodUtility.IsHumanlikeCorpseOrHumanlikeMeatOrIngredient(__instance);
-                }
-               
-
-                if (isHumanLike)
-                {
-                    var progress = CanibalismProgression.For(ingester);
-                    progress.ProgressWithTrait(__result);
-                }
-            }
+          isHumanLike = FoodUtility.IsHumanlikeCorpseOrHumanlikeMeatOrIngredient(__instance);
         }
+
+
+        if (isHumanLike)
+        {
+          var progress = CanibalismProgression.For(ingester);
+          progress.ProgressWithTrait(__result);
+        }
+      }
     }
+    private static bool ShouldProcess(Thing thing)
+    {
+      if (thing.def.IsCorpse)
+      {
+        Corpse corpse = thing as Corpse;
+        return thing.def.IsIngestible && corpse != null && corpse.InnerPawn != null && corpse.InnerPawn.RaceProps != null;
+      }
+      else
+      {
+        return thing.def.IsIngestible;
+      }
+    }
+  }
 }
