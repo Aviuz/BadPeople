@@ -1,4 +1,6 @@
 Changelog:
+1.4.1
+- NPE fix for eating small corpses
 1.4.0
 - Update to Rimworld 1.4
 1.3.1
