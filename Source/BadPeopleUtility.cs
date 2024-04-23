@@ -30,7 +30,7 @@ namespace BadPeople
 
         public static void NotifyPawnGotThought(Pawn pawn, Thought_Memory thought, Pawn otherPawn)
         {
-            if (thought.def == ThoughtDefOf.KnowGuestExecuted)
+            if (thought.def == BPDefOf.KnowGuestExecuted)
             {
                 AddPoints(pawn, PointsTable.FactionExecutedPrisoner, "BadPeople_Log_FactionExecutedPrisoner".Translate());
             }
@@ -47,11 +47,11 @@ namespace BadPeople
             {
                 AddPoints(pawn, PointsTable.MyOrganHarvested, "BadPeople_Log_MyOrganHarvested".Translate());
             }
-            else if (thought.def == ThoughtDefOf.ButcheredHumanlikeCorpse)
+            else if (thought.def == BPDefOf.ButcheredHumanlikeCorpse)
             {
                 AddPoints(pawn, PointsTable.HumanlikeButchered, "BadPeople_Log_ButcheredHumanlike".Translate());
             }
-            else if (thought.def == ThoughtDefOf.KnowButcheredHumanlikeCorpse)
+            else if (thought.def == BPDefOf.KnowButcheredHumanlikeCorpse)
             {
                 AddPoints(pawn, PointsTable.KnownHumanlikeButchered, "BadPeople_Log_ButcheredKnownHumanlike".Translate());
             }
