@@ -11,10 +11,10 @@ namespace BadPeople
         {
             // Make evil people immune to thoughts listed below
             List<ThoughtDef> nullifiedThoughts = new List<ThoughtDef>();
-            nullifiedThoughts.Add(ThoughtDefOf.KnowGuestExecuted);
+            nullifiedThoughts.Add(BPDefOf.KnowGuestExecuted);
             nullifiedThoughts.Add(ThoughtDefOf.KnowPrisonerDiedInnocent);
-            nullifiedThoughts.Add(ThoughtDefOf.KnowPrisonerSold);
-            nullifiedThoughts.Add(ThoughtDefOf.KnowGuestOrganHarvested);
+            nullifiedThoughts.Add(BPDefOf.KnowPrisonerSold);
+            nullifiedThoughts.Add(BPDefOf.KnowGuestOrganHarvested);
             nullifiedThoughts.Add(ThoughtDefOf.WitnessedDeathNonAlly);
 
             foreach (var thought in nullifiedThoughts)

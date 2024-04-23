@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<RecordDef>
+		<defName>BadPeople_CountOfKilledRelatives</defName>
+		<label>Killed Relatives</label>
+		<description>The number of relatives I killed</description>
+		<type>Int</type>
+	</RecordDef>
+	<RecordDef>
+		<defName>BadPeople_CountOfEatenCorpses</defName>
+		<label>Eaten humanlike corpses</label>
+		<description>The number of human corpses I eat as cannibal</description>
+		<type>Int</type>
+	</RecordDef>
+	<RecordDef>
+		<defName>BadPeople_CountOfFleshEaten</defName>
+		<label>Cannibal nutrition</label>
+		<description>The number of nutrition gained from humanlike meat</description>
+		<type>Float</type>
+	</RecordDef>
+</Defs>

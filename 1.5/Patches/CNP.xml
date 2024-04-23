@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Children and Pregnancy</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThoughtDef[defName = "ChildDied"]/nullifyingTraits</xpath>
+          <order>Prepend</order>
+          <value>
+            <li>BadPeople_Evil</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThoughtDef[defName = "ChildExecuted"]/nullifyingTraits</xpath>
+          <order>Prepend</order>
+          <value>
+            <li>BadPeople_Evil</li>
+          </value>
+        </li>
+        
+       </operations>
+    </match>
+  </Operation>
+</Patch>

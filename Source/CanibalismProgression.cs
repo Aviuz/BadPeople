@@ -43,7 +43,7 @@ namespace BadPeople
         public CanibalismProgression(Pawn pawn)
         {
             this.pawn = pawn;
-            Locked = !pawn.RaceProps.Humanlike || pawn.story.traits.HasTrait(TraitDefOf.Cannibal) || HunamoidRaceCheck.IsCannibalByRace(pawn.kindDef.race.defName);
+            Locked = !pawn.RaceProps.Humanlike || pawn.story.traits.HasTrait(BPDefOf.Cannibal) || HunamoidRaceCheck.IsCannibalByRace(pawn.kindDef.race.defName);
             fleshAmount = 0;
         }
         public void ProgressWithTrait(float nutrition)
@@ -99,11 +99,11 @@ namespace BadPeople
 
             if (value < chance)
             {
-                pawn.story.traits.GainTrait(new Trait(TraitDefOf.Cannibal, 0, true));
+                pawn.story.traits.GainTrait(new Trait(BPDefOf.Cannibal, 0, true));
                 if (pawn.IsColonist)
                     Find.WindowStack.Add(new Dialog_AlteringNotification(pawn, null, AlterType.Cannibal));
                 else if (pawn.IsPrisonerOfColony)
-                    Messages.Message("BadPeople_GainedTrait".Translate(pawn.Name.ToStringShort, TraitDefOf.Cannibal.degreeDatas[0].label), pawn, MessageTypeDefOf.NeutralEvent);
+                    Messages.Message("BadPeople_GainedTrait".Translate(pawn.Name.ToStringShort, BPDefOf.Cannibal.degreeDatas[0].label), pawn, MessageTypeDefOf.NeutralEvent);
                 Locked = true;
             }
         }
